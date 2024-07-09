@@ -1,6 +1,7 @@
 package com.rojer.factoryMoudle.impl.pay;
 
 import com.rojer.factoryMoudle.impl.pay.abs.AbstractPaymentStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -10,6 +11,10 @@ import java.math.BigDecimal;
  */
 @Component
 public class AliPay extends AbstractPaymentStrategy {
+
+    // 可注入别的类
+    // @Autowired
+    // private Pay pay;
 
     @Override
     public void pay(BigDecimal amount) {

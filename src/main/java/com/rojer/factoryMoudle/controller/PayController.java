@@ -20,6 +20,10 @@ public class PayController {
     @Autowired
     private PaymentStrategyFactory paymentStrategyFactory;
 
+    /**
+     * 普通写发法
+     * @param module
+     */
     @PostMapping("/online/pay1")
     public void pay(@RequestBody PayModule module) {
         PaymentStrategy paymentStrategy;
@@ -39,6 +43,10 @@ public class PayController {
         paymentStrategy.pay(module.getPayAmount());
     }
 
+    /**
+     * 改造后写法
+     * @param module
+     */
     @PostMapping("/online/pay2")
     public void pay2(@RequestBody PayModule module) {
         AbstractPaymentStrategy strategy = paymentStrategyFactory.getPaymentStrategy(module.getPayType());

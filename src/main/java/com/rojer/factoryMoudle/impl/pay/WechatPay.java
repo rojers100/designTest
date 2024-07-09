@@ -11,6 +11,9 @@ import java.math.BigDecimal;
 @Component
 public class WechatPay extends AbstractPaymentStrategy {
 
+    // 可注入别的类
+    // @Autowired
+    // private Pay pay;
 
     @Override
     public void pay(BigDecimal amount) {

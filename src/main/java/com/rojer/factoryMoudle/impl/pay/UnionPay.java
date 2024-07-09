@@ -10,6 +10,11 @@ import java.math.BigDecimal;
  */
 @Component
 public class UnionPay extends AbstractPaymentStrategy {
+
+    // 可注入别的类
+    // @Autowired
+    // private Pay pay;
+
     @Override
     public void pay(BigDecimal amount) {
         System.out.println("进行了银联支付");
